@@ -7,11 +7,11 @@
     use \Mpdf\QrCode\Output;
 
     $payload = (new Payload)
-        ->setPixKey('rodrigocorsarios@hotmail.com')
+        ->setPixKey('Sua chave pix')
         ->setDescription('Pagamento do pedido')
         ->setMerchantName('Rodrigo Barbosa')
         ->setMerchantCity('Santo Andre')
-        ->setAmount(100.00)
+        ->setAmount(2.00)
         ->setTxid('qrcode1234');
 
     $payloadQrCode = $payload->getPayload();
