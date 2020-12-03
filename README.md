@@ -9,6 +9,16 @@
   <a href="#-about">About</a>
 </p>
 
+<br>
+
+<p align="center">
+  <img src="/images/qrco.png" width="200" title="QR Code">
+</p>
+
+<p align="center">Money is always welcome!</p>
+
+<br>
+
 ## 💻 Commands
 
 ### To start the project
