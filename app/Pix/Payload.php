@@ -109,7 +109,7 @@ class Payload {
     {
         $gui = $this->getValue(self::ID_MERCHANT_ACCOUNT_INFORMATION_GUI, 'br.gov.bcb.pix');
         $key = $this->getValue(self::ID_MERCHANT_ACCOUNT_INFORMATION_KEY, $this->pixKey);
-        $description = strlen($this->description)  ? $this->getValue(self::ID_MERCHANT_ACCOUNT_INFORMATION_DESCRIPTION, $this->description) : '';
+        $description = mb_strlen($this->description)  ? $this->getValue(self::ID_MERCHANT_ACCOUNT_INFORMATION_DESCRIPTION, $this->description) : '';
 
         return $this->getValue(self::ID_MERCHANT_ACCOUNT_INFORMATION, $gui.$key.$description);
     }
@@ -121,7 +121,7 @@ class Payload {
      */
     private function getValue($id, $value)
     {
-        $size = str_pad(strlen($value), 2, '0', STR_PAD_LEFT);
+        $size = str_pad(mb_strlen($value), 2, '0', STR_PAD_LEFT);
         return $id.$size.$value;
     }
 

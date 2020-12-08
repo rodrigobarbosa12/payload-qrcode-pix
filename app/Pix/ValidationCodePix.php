@@ -19,7 +19,7 @@ class ValidationCodePix
         $resultado = 0xFFFF;
 
         //CHECKSUM
-        if (($length = strlen($payload)) > 0) {
+        if (($length = mb_strlen($payload)) > 0) {
             for ($offset = 0; $offset < $length; $offset++) {
                 $resultado ^= (ord($payload[$offset]) << 8);
                 for ($bitwise = 0; $bitwise < 8; $bitwise++) {
